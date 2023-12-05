@@ -1,14 +1,51 @@
 @charset "utf-8";
+
+/* 初期設定 */
+
 * {
     margin: 0;
     padding: 0;
+    /* 変数 */
+    --base: #fa983a;
+    --main: #fa983a;
+    --accent: #fa983a;
 }
+
+
+/* ここからデザイン部 */
+
+
+/* 全体 */
 
 body {
     width: 100vw;
 }
 
 #canvas {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
+}
+
+
+/* ヘッダー部 */
+
+#header {
+    background-color: var(--main);
+    height: 4em;
+}
+
+#link {
+    padding: 1em 0.5em;
+}
+
+#link ul {
+    display: block;
+    list-style-type: none;
+    text-align: right;
+    float: right;
+}
+
+#link li {
+    float: left;
+    padding: 0 1em;
 }
