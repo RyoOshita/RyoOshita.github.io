@@ -4,25 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
     <title>大下涼 - ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
+<!-- ここからメインコンテンツ -->
+
 <body>
-    <div id="canvas">
-        <header>
-            <div id="header">
-                <div id="link">
-                    <ul>
-                        <li>移動1</li>
-                        <li>移動2</li>
-                        <li>移動3</li>
-                        <li>移動4</li>
-                    </ul>
+    <!-- ヘッダー部 -->
+    <header>
+        <div id="header" class="WidthLock">
+            <div id="link">
+                <ul>
+                    <a href="#TOP">
+                        <li>TOP</li>
+                    </a>
+                    <a href="#profile">
+                        <li>PROFILE</li>
+                    </a>
+                    <a href="#career">
+                        <li>CAREER</li>
+                    </a>
+                    <a href="">
+                        <li>移動</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 見出し部分-->
+    <section>
+        <div id="top">
+            <h1 style="position: absolute; top: 25%; left: 50%;transform: translate(-50%, -50%);">ここに各種技術をイメージした動画を流す</h1>
+        </div>
+    </section>
+
+    <!-- プロフィール-->
+    <section>
+        <div id="profile" class="contents WidthLock clearfix">
+            <div id="profile_name">
+                <h2 id="name" class="textHeading">大下 涼<span>Ryo Oshita</span></h2>
+                <div id="MyImg">
+                    <img src="img/MyPhoto.jpg" alt="自身の写真">
                 </div>
             </div>
-        </header>
-    </div>
+            <div id="profile_comment">
+                <h2 id="PR" class="textHeading">自己紹介</h2>
+                <div>
+                    <p>学生の時から、パソコンで何か作るのが好きで、<strong>プログラミング</strong>や<strong>動画編集</strong>を独学で勉強しました。</p>
+                    <p>スポーツ用品店 Decathlon西宮店にてITエンジニアとしてアルバイトから社員登用し、web技術や店内機器のトラブル対応などを接客しながら実施しました</p>
+                    <p>その後、Adecco株式会社のModisブランド<small>(※現在は一度Modis株式会社となり、アコーディスコンサルティング株式会社へ)</small>に属してインフラエンジニアとしてサーバーやルーター機器の保全を行っております。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 経歴 -->
+    <section>
+        <div id="career" class="WidthLock contents">
+            <h2 id="careerHeading" class="textHeading">これまでの経歴</h2>
+            <div id="careerMain" class="WidthLock">
+                <ul>
+                    <li>
+                        <p>xxxx年03月 兵庫県立武庫荘総合高校 卒業</p>
+                        <p><small>総合学科にて情報系科目を多く取得し、ITに関する知識を幅広く取得</small></p>
+                    </li>
+                    <li>
+                        <p>xxxx年4月 神戸電子専門学校 エンターテインメントソフト学科 入学</p>
+                        <p>2020年3月 神戸電子専門学校 エンターテインメントソフト学科 卒業</p>
+                        <p><small>ゲームプログラミングを通じてプログラミングの基礎を学習。</small></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS読み込み -->
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
 </body>
 
 </html>

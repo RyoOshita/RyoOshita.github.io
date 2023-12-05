@@ -1,51 +1,158 @@
-@charset "utf-8";
-
-/* 初期設定 */
-
-* {
-    margin: 0;
-    padding: 0;
-    /* 変数 */
-    --base: #fa983a;
-    --main: #fa983a;
-    --accent: #fa983a;
-}
-
-
-/* ここからデザイン部 */
-
-
-/* 全体 */
-
-body {
-    width: 100vw;
-}
-
-#canvas {
-    width: 70%;
-    margin: 0 auto;
-}
-
-
-/* ヘッダー部 */
-
-#header {
-    background-color: var(--main);
-    height: 4em;
-}
-
-#link {
-    padding: 1em 0.5em;
-}
-
-#link ul {
-    display: block;
-    list-style-type: none;
-    text-align: right;
-    float: right;
-}
-
-#link li {
-    float: left;
-    padding: 0 1em;
-}
+    @charset "utf-8";
+    /* 初期設定 */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        /* 変数 */
+        --base: #F2F2F2;
+        --main: #1F1F1F;
+        --accent: #fa983a;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    /* ここからデザイン部 */
+    /* 全体 */
+    
+    body {
+        background-color: var(--backcolor);
+    }
+    
+    p {
+        color: var(--main);
+    }
+    
+    .WidthLock {
+        width: 80%;
+    }
+    
+    .contents {
+        margin: 3em auto;
+    }
+    
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    .textColor {
+        color: var(--main);
+    }
+    
+    small {
+        font-size: 0.5em;
+    }
+    
+    .textHeading {
+        margin: 1em;
+        border-bottom: solid;
+        color: var(--main);
+    }
+    /* ヘッダー部 */
+    
+    #header {
+        height: 4em;
+        position: fixed;
+        transition: all 0.5s 0s ease;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        z-index: 1;
+    }
+    
+    #link {
+        transform: translate(0%, -75%);
+        position: absolute;
+        right: 0%;
+        top: 50%;
+    }
+    
+    #link ul {
+        display: block;
+        list-style-type: none;
+        text-align: right;
+        float: right;
+        color: var(--base);
+        text-shadow: 1px 1px 2px var(--main);
+        filter: blur(0px);
+    }
+    
+    #link>ul>a {
+        color: var(--base)
+    }
+    
+    #link li {
+        float: left;
+        padding: 0 1em;
+        border-right: solid var(--base);
+    }
+    
+    #link>ul>a:last-child>li {
+        border: none;
+    }
+    /* トップ */
+    
+    #top {
+        background-color: #00ff00;
+        height: 72vh;
+        width: 100%;
+    }
+    /* コンテンツ */
+    
+    #profile_name,
+    #profile_comment {
+        width: 49%;
+    }
+    
+    #profile_name {
+        float: left;
+    }
+    
+    #profile_comment {
+        float: right;
+    }
+    
+    #name>span {
+        font-size: 0.5em;
+        margin: 0 0.5em
+    }
+    
+    #MyImg {
+        width: 50%;
+        margin: 0 auto;
+        line-height: 1;
+    }
+    
+    #MyImg>img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    #profile_comment>div {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    #career {
+        color: var(--main);
+    }
+    
+    #careerMain {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    #careerMain>ul {
+        list-style-type: none;
+    }
+    
+    #careerMain>ul>li {
+        margin: 1em;
+    }
+    
+    #careerMain>ul>li>p {
+        margin: 0
+    }
