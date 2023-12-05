@@ -16,6 +16,7 @@
     
     body {
         background-color: var(--backcolor);
+        color: var(--main);
     }
     
     p {
@@ -47,7 +48,65 @@
     .textHeading {
         margin: 1em;
         border-bottom: solid;
+    }
+    
+    .flexcont {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .flexitem {
+        width: 15%;
+        height: 5em;
+        border: solid;
+        margin: 0.75em;
+        text-align: center;
+    }
+    
+    .flexitem>div {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    
+    .subflexcont {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .subflexitem {
+        width: 30%;
+        height: 27em;
+        border: solid;
+        margin: 0.75em;
+        text-align: center;
+    }
+    
+    .subsection {
+        width: 80%;
+        margin: 0 auto;
+        background-color: var(--main);
+        color: var(--base);
+        font-size: 0.8em;
+    }
+    
+    .subsection:nth-child(even) {
+        background: var(--base);
         color: var(--main);
+    }
+    
+    .LangLogo>img {
+        width: 50%;
+        margin: 1em;
+    }
+    
+    .tectext {
+        text-align: left;
+        margin: 1em;
     }
     /* ヘッダー部 */
     
@@ -101,9 +160,12 @@
     }
     /* コンテンツ */
     
-    #profile_name,
+    #profile_name {
+        width: 30%;
+    }
+    
     #profile_comment {
-        width: 49%;
+        width: 68%;
     }
     
     #profile_name {
@@ -136,23 +198,32 @@
         margin: 0 auto;
     }
     
-    #career {
+    #Work {
         color: var(--main);
     }
     
-    #careerMain {
+    #WorkMain {
         width: 80%;
         margin: 0 auto;
     }
     
-    #careerMain>ul {
+    #WorkMain>ul {
         list-style-type: none;
     }
     
-    #careerMain>ul>li {
+    #WorkMain>ul>li {
         margin: 1em;
     }
     
-    #careerMain>ul>li>p {
+    #WorkMain>ul>li>p {
         margin: 0
+    }
+    
+    #WorkMain>ul>li>p>small {
+        margin-left: 2em;
+    }
+    
+    #technology {
+        margin-top: 1em;
+        padding: 0.7em 0;
     }
