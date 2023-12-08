@@ -10,7 +10,7 @@
     --main: #1F1F1F;
     --accent: #fa983a;
     font-family: 'Noto Sans JP', sans-serif;
-    transition: all 0.1s ease-in-out;
+    /* transition: all 0.1s ease-in-out; */
 }
 /* ここからデザイン部 */
 /* 全体 */
@@ -154,8 +154,12 @@ small {
     height: 40%;
 }
 
-.LangLogo>img,.LangLogo>a>img {
+.LangLogo>img, .LangLogo>a>img, .LinkImg>img {
     height: 80%;
+    margin: 1em;
+}
+.LinkImg>img {
+    width: 80%;
     margin: 1em;
 }
 
@@ -172,7 +176,7 @@ small {
     left: 50%;
     transform: translate(-50%, 0%);
     -webkit-transform: translate(-50%, 0%);
-    -ms-transform: translate(-50%, 0%);
+    -ms-transform: t1ranslate(-50%, 0%);
     z-index: 1;
 }
 
@@ -289,7 +293,10 @@ small {
     padding: 0.7em 0;
 }
 
-
+#work a{
+    color: var(--base);
+    text-decoration: none;
+}
 
 
 #achievements {
@@ -303,7 +310,14 @@ small {
     background-color: var(--main);
 }
 
-
+@media not screen and (max-width: 900px) {
+    .subflexitem>a:hover>div:first-child{
+        background-color: var(--base);
+        color: var(--main);
+        opacity: 50;
+        transition: all 0.1s ease-in-out;
+    }
+}
 
 @media screen and (max-width: 900px) {
     body{
