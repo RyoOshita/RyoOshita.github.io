@@ -1,263 +1,342 @@
-    @charset "utf-8";
-    /* 初期設定 */
-    
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
-    * {
-        margin: 0;
-        padding: 0;
-        /* 変数 */
-        --base: #F2F2F2;
-        --main: #1F1F1F;
-        --accent: #fa983a;
-        font-family: 'Noto Sans JP', sans-serif;
-    }
-    /* ここからデザイン部 */
-    /* 全体 */
-    
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 4em;
-    }
-    
-    body {
-        background-color: var(--base);
-        color: var(--main);
-    }
-    
-    p {
-        color: var(--main);
-    }
-    
-    .WidthLock {
-        width: 80%;
-    }
-    
-    .contents {
-        margin: 3em auto;
-    }
-    
-    .clearfix::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    
-    .textColor {
-        color: var(--main);
-    }
-    
-    small {
-        font-size: 0.5em;
-    }
-    
-    .textHeading {
-        margin: 1em;
-        border-bottom: solid;
-    }
-    
-    .flexcont {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .flexcont>a {
-        color: var(--main);
-        text-decoration: none;
-        transition: all 0.3s;
-    }
-    
-    .flexcont>a:hover {
-        background-color: var(--main);
-        color: var(--base);
-    }
-    
-    .flexitem {
-        width: 15%;
-        height: 5em;
-        border: solid;
-        margin: 0.75em;
-        text-align: center;
-    }
-    
-    .flexitem>div {
-        position: relative;
-        top: 50%;
-        transform: translate(0, -50%);
-    }
-    
-    .subflexcont {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+@charset "utf-8";
+/* 初期設定 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    /* 変数 */
+    --base: #F2F2F2;
+    --main: #1F1F1F;
+    --accent: #fa983a;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: all 0.1s ease-in-out;
+}
+/* ここからデザイン部 */
+/* 全体 */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4em;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--main);
+}
+
+p {
+    color: var(--main);
+}
+
+table{
+    width: 100%;
+    border-collapse:  collapse;
+}
+tr{
+    height: 3em;
+}
+th{
+    background-color: var(--main);
+    color:var(--base);
+    height: 3.2em;
+    font-size: 2em;
+}
+td{
+    padding-left: 1em;
+    background-color: #BDBDBD;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+tr:nth-child(even)>td{
+    background-color: var(--base);
+}
+th,td{
+    border: solid var(--base) 2px;
+}
+
+
+.WidthLock {
+    width: 80%;
+}
+
+.contents {
+    margin: 3em auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.textColor {
+    color: var(--main);
+}
+
+small {
+    font-size: 0.5em;
+}
+
+.textHeading {
+    margin: 1em;
+    border-bottom: solid;
+}
+
+.flexcont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexcont>a {
+    color: var(--main);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.flexcont>a:hover {
+    background-color: var(--main);
+    color: var(--base);
+}
+
+.flexitem {
+    width: 15%;
+    height: 5em;
+    border: solid;
+    margin: 0.75em;
+    text-align: center;
+}
+
+.flexitem>div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.subflexcont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subflexitem {
+    width: 30%;
+    height: 40em;
+    border: solid;
+    margin: 0.75em;
+    text-align: center;
+    min-width: 240px;
+}
+
+.subsection {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--main);
+    color: var(--base);
+    font-size: 0.8em;
+}
+
+.subsection h2{
+    font-size: 1.7em;
+}
+.subsection:nth-child(even) {
+    background: var(--base);
+    color: var(--main);
+    margin: 0 auto;
+}
+
+.LangLogo{
+    width: 100%;
+    height: 40%;
+}
+
+.LangLogo>img,.LangLogo>a>img {
+    height: 80%;
+    margin: 1em;
+}
+
+.tectext {
+    text-align: left;
+    margin: 1em;
+}
+/* ヘッダー部 */
+
+#header {
+    height: 4em;
+    position: fixed;
+    transition: all 0.5s 0s ease;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    z-index: 1;
+}
+
+#link {
+    transform: translate(0%, -75%);
+    position: absolute;
+    right: 0%;
+    top: 50%;
+}
+
+#link ul {
+    display: block;
+    list-style-type: none;
+    text-align: right;
+    float: right;
+    color: var(--base);
+    text-shadow: 1px 1px 2px var(--main);
+    filter: blur(0px);
+}
+
+#link>ul>a {
+    color: var(--base);
+    float: left;
+}
+
+#link li {
+    float: left;
+    padding: 0 1em;
+    border-right: solid var(--base);
+}
+
+#link>ul>a:last-child>li {
+    border: none;
+}
+/* トップ */
+
+#top {
+    height: 72vh;
+    width: 100%;
+    object-fit: cover;
+}
+/* コンテンツ */
+
+#profile_name {
+    width: 30%;
+}
+
+#profile_comment {
+    width: 68%;
+}
+
+#profile_name {
+    float: left;
+}
+
+#profile_comment {
+    float: right;
+}
+
+#name>span {
+    font-size: 0.5em;
+    margin: 0 0.5em
+}
+
+#MyImg {
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+#MyImg>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#profile_comment>div {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#tecWork {
+    color: var(--main);
+}
+
+#WorkMain {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#WorkMain>ul {
+    list-style-type: none;
+}
+
+#WorkMain>ul>li {
+    margin: 1em;
+}
+
+#WorkMain>ul>li>p {
+    margin: 0;
+}
+
+#WorkMain>ul>li>p>small {
+    margin-left: 2em;
+}
+
+#technology {
+    margin-top: 1em;
+    padding: 0.7em 0;
+}
+
+#license,
+#work {
+    padding: 0.7em 0;
+}
+
+
+
+
+#achievements {
+    margin-bottom: 1em;
+}
+/* footer */
+
+#footer {
+    width: 100%;
+    height: 20em;
+    background-color: var(--main);
+}
+
+
+
+@media screen and (max-width: 900px) {
+    body{
+        font-size: 0.7em;
+        min-width: 620px;
     }
     
     .subflexitem {
-        width: 30%;
-        height: 27em;
-        border: solid;
-        margin: 0.75em;
-        text-align: center;
-    }
-    
-    .subsection {
         width: 80%;
-        margin: 0 auto;
-        background-color: var(--main);
-        color: var(--base);
-        font-size: 0.8em;
+        height: 30em;
     }
     
-    .subsection:nth-child(even) {
-        background: var(--base);
-        color: var(--main);
-        margin: 0 auto;
+    .LangLogo{
+        height: 60%;
+    }
+
+    table{
+        font-size: 1em;
     }
     
-    .LangLogo>img {
-        width: 50%;
-        margin: 1em;
-    }
-    
-    .tectext {
-        text-align: left;
-        margin: 1em;
-    }
-    /* ヘッダー部 */
-    
+    /* headre   */
     #header {
-        height: 4em;
-        position: fixed;
-        transition: all 0.5s 0s ease;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        -webkit-transform: translate(-50%, 0%);
-        -ms-transform: translate(-50%, 0%);
-        z-index: 1;
+        font-size: 1.5em;
     }
-    
-    #link {
-        transform: translate(0%, -75%);
-        position: absolute;
-        right: 0%;
-        top: 50%;
-    }
-    
-    #link ul {
-        display: block;
-        list-style-type: none;
-        text-align: right;
-        float: right;
-        color: var(--base);
-        text-shadow: 1px 1px 2px var(--main);
-        filter: blur(0px);
-    }
-    
-    #link>ul>a {
-        color: var(--base);
-        float: left;
-    }
-    
-    #link li {
-        float: left;
-        padding: 0 1em;
-        border-right: solid var(--base);
-    }
-    
-    #link>ul>a:last-child>li {
-        border: none;
-    }
-    /* トップ */
-    
-    #top {
-        height: 72vh;
-        width: 100%;
-        object-fit: cover;
-    }
-    /* コンテンツ */
-    
-    #profile_name {
-        width: 30%;
-    }
-    
-    #profile_comment {
-        width: 68%;
-    }
-    
-    #profile_name {
-        float: left;
-    }
-    
-    #profile_comment {
-        float: right;
-    }
-    
-    #name>span {
-        font-size: 0.5em;
-        margin: 0 0.5em
-    }
-    
+
+    /* profile */
     #MyImg {
-        width: 50%;
-        margin: 0 auto;
-        line-height: 1;
+        width: 70%;
     }
-    
-    #MyImg>img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
+}
+
+@media not screen and (max-width: 1170px) {
+    .subflexitem {
+        height: 25em;
     }
-    
-    #profile_comment>div {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    #tecWork {
-        color: var(--main);
-    }
-    
-    #WorkMain {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    #WorkMain>ul {
-        list-style-type: none;
-    }
-    
-    #WorkMain>ul>li {
-        margin: 1em;
-    }
-    
-    #WorkMain>ul>li>p {
-        margin: 0;
-    }
-    
-    #WorkMain>ul>li>p>small {
-        margin-left: 2em;
-    }
-    
-    #technology {
-        margin-top: 1em;
-        padding: 0.7em 0;
-    }
-    
-    #license,
-    #work {
-        padding: 0.7em 0;
-    }
-    
-    #achievements {
-        margin-bottom: 1em;
-    }
-    /* footer */
-    
-    #footer {
-        width: 100%;
-        height: 20em;
-        background-color: var(--main);
-    }
+}
