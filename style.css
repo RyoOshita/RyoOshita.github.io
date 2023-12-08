@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* 初期設定 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
@@ -10,9 +11,13 @@
     --main: #1F1F1F;
     --accent: #fa983a;
     font-family: 'Noto Sans JP', sans-serif;
-    transition: all 0.1s ease-in-out;
+    /* transition: all 0.1s ease-in-out; */
 }
+
+
 /* ここからデザイン部 */
+
+
 /* 全体 */
 
 html {
@@ -29,33 +34,37 @@ p {
     color: var(--main);
 }
 
-table{
+table {
     width: 100%;
-    border-collapse:  collapse;
+    border-collapse: collapse;
 }
-tr{
+
+tr {
     height: 3em;
 }
-th{
+
+th {
     background-color: var(--main);
-    color:var(--base);
+    color: var(--base);
     height: 3.2em;
     font-size: 2em;
 }
-td{
+
+td {
     padding-left: 1em;
     background-color: #BDBDBD;
     font-size: 1.5em;
     font-weight: bold;
 }
 
-tr:nth-child(even)>td{
+tr:nth-child(even)>td {
     background-color: var(--base);
 }
-th,td{
+
+th,
+td {
     border: solid var(--base) 2px;
 }
-
 
 .WidthLock {
     width: 80%;
@@ -121,6 +130,7 @@ small {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    min-width: 390px;
 }
 
 .subflexitem {
@@ -129,40 +139,77 @@ small {
     border: solid;
     margin: 0.75em;
     text-align: center;
-    min-width: 240px;
 }
 
 .subsection {
     width: 80%;
+    min-width: 420px;
     margin: 0 auto;
     background-color: var(--main);
     color: var(--base);
     font-size: 0.8em;
 }
 
-.subsection h2{
+.subsection h2 {
     font-size: 1.7em;
 }
+
 .subsection:nth-child(even) {
     background: var(--base);
     color: var(--main);
     margin: 0 auto;
 }
 
-.LangLogo{
+.LangLogo,
+.BigLinkBox {
     width: 100%;
     height: 40%;
 }
 
-.LangLogo>img,.LangLogo>a>img {
+.LangLogo>img,
+.LangLogo>a>img {
     height: 80%;
     margin: 1em;
+}
+
+.LinkImg>img {
+    height: 60%;
+    margin: 1em;
+    width: auto;
 }
 
 .tectext {
     text-align: left;
     margin: 1em;
 }
+
+.LinkImg {
+    height: 100%;
+}
+
+.BigLinkBox {
+    position: relative;
+}
+
+.BigLinkBox div {
+    height: 100%;
+}
+
+.BigLink {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.BigLink:hover {
+    background-color: var(--base);
+    opacity: 0.6;
+}
+
+
 /* ヘッダー部 */
 
 #header {
@@ -172,8 +219,9 @@ small {
     left: 50%;
     transform: translate(-50%, 0%);
     -webkit-transform: translate(-50%, 0%);
-    -ms-transform: translate(-50%, 0%);
+    -ms-transform: t1ranslate(-50%, 0%);
     z-index: 1;
+    min-width: 320px;
 }
 
 #link {
@@ -207,6 +255,8 @@ small {
 #link>ul>a:last-child>li {
     border: none;
 }
+
+
 /* トップ */
 
 #top {
@@ -214,6 +264,8 @@ small {
     width: 100%;
     object-fit: cover;
 }
+
+
 /* コンテンツ */
 
 #profile_name {
@@ -260,6 +312,7 @@ small {
 
 #WorkMain {
     width: 80%;
+    min-width: 200px;
     margin: 0 auto;
 }
 
@@ -289,12 +342,16 @@ small {
     padding: 0.7em 0;
 }
 
-
-
+#work a {
+    color: var(--base);
+    text-decoration: none;
+}
 
 #achievements {
     margin-bottom: 1em;
 }
+
+
 /* footer */
 
 #footer {
@@ -303,32 +360,34 @@ small {
     background-color: var(--main);
 }
 
-
+@media not screen and (max-width: 900px) {
+    .subflexitem>a:hover>div:first-child {
+        background-color: var(--base);
+        color: var(--main);
+        opacity: 50;
+        transition: all 0.1s ease-in-out;
+    }
+}
 
 @media screen and (max-width: 900px) {
-    body{
+    body {
         font-size: 0.7em;
-        min-width: 620px;
+        min-width: 320px;
     }
-    
     .subflexitem {
         width: 80%;
         height: 30em;
     }
-    
-    .LangLogo{
+    .LangLogo {
         height: 60%;
     }
-
-    table{
+    table {
         font-size: 1em;
     }
-    
     /* headre   */
     #header {
         font-size: 1.5em;
     }
-
     /* profile */
     #MyImg {
         width: 70%;
