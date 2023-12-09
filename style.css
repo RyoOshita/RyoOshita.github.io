@@ -175,7 +175,9 @@ small {
 .LinkImg>img {
     height: 60%;
     margin: 1em;
-    width: auto;
+    width: 80%;
+    object-fit: contain;
+  box-sizing: border-box;
 }
 
 .tectext {
@@ -185,6 +187,7 @@ small {
 
 .LinkImg {
     height: 100%;
+    width: 100%;
 }
 
 .BigLinkBox {
