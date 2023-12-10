@@ -457,11 +457,11 @@ small {
         min-width: 320px;
     }
     .subflexitem {
-        width: 80%;
+        width: 40%;
         height: 30em;
     }
     .LangLogo {
-        height: 60%;
+        height: 30%;
     }
     table {
         font-size: 1em;
