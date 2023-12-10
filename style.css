@@ -177,7 +177,7 @@ small {
     margin: 1em;
     width: 80%;
     object-fit: contain;
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .tectext {
@@ -210,6 +210,38 @@ small {
 .BigLink:hover {
     background-color: var(--base);
     opacity: 0.6;
+}
+
+.achievitem {
+    /* position: absolute; */
+    width: 70%;
+    /* top: 0.5em;
+    left: 1em; */
+    background-color: var(--main);
+    color: var(--base);
+    padding: 1em;
+    margin: 2em;
+    text-align: left;
+    box-shadow: 0.5em 0.5em #1F1F1F99;
+}
+
+.achievitem p {
+    color: var(--base);
+}
+
+.achievitem:nth-child(even) {
+    right: 1em;
+    margin: 1em 1em 1em auto;
+}
+
+.achievitem>span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.achievitem>div {
+    padding-left: 1em;
+    padding-top: 0.5em;
 }
 
 
